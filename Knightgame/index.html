@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div id="music-controls">
+		<img src="assets/img/sndon.png"
+		onclick="mute();">
+	</div>
+	<audio id="GameAudio" loop>
+		<source src="assets/bkmusic.mp3" type="audio/mp3">
+		Yadda yadda.
+	</audio>
+	<audio id="GameAudio2">
+		<source src="assets/GameOver.mp3" type="audio/mp3">
+		Yadda yadda.
+	</audio>
+	<audio id="GameAudio3">
+		<source src="assets/atk.mp3" type="audio/mp3">
+		Yadda yadda.
+	</audio>
+	<audio id="GameAudio4">
+		<source src="assets/cri.mp3" type="audio/mp3">
+		Yadda yadda.
+	</audio>
+
+	<div id="container">
+		<div id="topRow">
+			<div id="playerStats" class="stats">
+				<span class="healthLabel">HP</span><br>
+				<div class="hpBorder">
+					<div id="playerHP" class="hpBar"></div>
+				</div>
+				<p id="playerMoves">
+					<span class="healthLabel">MOVES</span><br>
+					<button onclick="attack(); snd.play(); snd.currentTime = 0" class="buttonStyle">ATTACK</button>
+					<button onclick="specialAttack(); cri.play(); cri.currentTime = 0" class="buttonStyle">SPECIAL</button>
+				</p>
+			</div>
+			<div id="player" class="chars">
+				<img src="assets/img/P1.png">
+			</div>
+			<div id="enemy" class="chars">
+				<img src="assets/img/P2.png">
+			</div>
+			<div id="enemyStats" class="stats">
+				<span class="healthLabel">HP</span><br>
+				<div class="hpBorder">
+					<div id="enemyHP" class="hpBar"></div>
+				</div>
+			</div>
+		</div>
+		<div id="bottomRow">
+			<h1>Knight of sword</h1>
+			<button onclick="beginBattle()" class="buttonStyle">START FIGHT</button>
+		</div>
+	</div>
+<script type="text/javascript" src="script.js"></script>	
+</body>
+</html>
